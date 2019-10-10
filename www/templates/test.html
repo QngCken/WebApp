@@ -5,9 +5,11 @@
   <title>{{ title }}</title>
 </head>
 <body>
-  <h1> All Users </h1>
-  {% for u in users %}
-  <p>{{ u.name }} / {{u.email }}</p>
+  <h1> All Blogs </h1>
+  {% for b in blogs %}
+  <p>{{ b.user_name }} / {{b.created_at|datetime }}</p>
+  <p>{{ b.name }}</p>
+  <p>{{ b.summary }}</p>
   {% endfor %}
 </body>
 </html>

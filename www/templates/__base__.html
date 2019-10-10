@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+{% macro pagination(url, page) %}
+    <div class="pagi">
+        {% if page.has_previous %}
+            <a href="{{ url }}{{ page.page_index - 1 }}">上一页</a>
+        {% else %}
+            <a class="un">首页</a>
+        {% endif %}
+            <a class="un">第{{ page.page_index }}页</a>
+        {% if page.has_next %}
+            <a href="{{ url }}{{ page.page_index + 1 }}">下一页</a>
+        {% else %}
+            <a class="un">尾页</a>
+        {% endif %}
+    </div>
+{% endmacro %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} ? {% endblock %} - QngCken Python Webapp</title>
+    <link rel="shortcut icon" href="../static/fts/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/script.js"></script>
+</head>
+
+<body>
+    <!-- ⬇⬇页眉部分⬇⬇ -->
+    <header class="w">
+        <!-- 顶部空白部分 -->
+        <div class="top"></div>
+        <!-- 主体部分 -->
+        <div class="btm">
+            <!-- 图标logo -->
+            <div class="logo fl"><a href="/index">
+                    <h1>QngCken的个人网站</h1><img src="../static/igs/lgb.png" alt="logo-QngCken">
+                </a></div>
+            <!-- home导航 -->
+            <div class="home fl"><a href="/index">首页<></a></div>
+            <!-- 搜索框 -->
+            <div class="srh fl">
+                <input type="text" placeholder="Python学习笔记">
+                <input type="button" value="搜索">
+            </div>
+            <!-- 登录/注册区 -->
+            <div class="chk fr">
+                <div class="usri"><img src="../static/igs/usr/usrs.png" alt="usericon"></div>
+                <a href="/doing">登录</a><i>|</i><a href="/doing">注册</a>
+            </div>
+        </div>
+    </header>
+    <!-- ⬆⬆页眉部分⬆⬆ -->
+    <!-- 中间体部分 -->
+    <section class="w">
+        {% block content %}
+        {% endblock %}
+    </section>
+    <!-- ⬇⬇页脚部分⬇⬇ -->
+    <footer>
+        <div class="w">
+            <div class="logo"><a href="/index">
+                    <h1>QngCken的个人网站</h1><img src="../static/igs/lgf.png" alt="logo-QngCken">
+                </a>
+            </div>
+            <div class="copy">
+                <p><a href="/">QngCken的个人网站</a> &copy; 2019</p>
+            </div>
+            <div class="prby">Powered by Python
+                <a target="_blank" href="https://www.baidu.com/baidu?wd=jinja2">jinja2</a></div>
+            <div class="thks">Learned from
+                <a target="_blank" href="https://www.liaoxuefeng.com/">廖雪峰的官方网站</a> &amp;
+                <a target="_blank" href="https://www.w3school.com.cn/">W3school在线教程</a> &amp;
+                <a target="_blank" href="https://space.bilibili.com/37974444/">黑马程序员</a>
+            </div>
+        </div>
+    </footer>
+    <!-- ⬆⬆页脚部分⬆⬆ -->
+</body>
+
+</html>

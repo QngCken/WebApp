@@ -52,7 +52,7 @@ async def execute(sql, args, autocommit=True):
             await cur.close()
             if not autocommit:
                 await conn.commit()
-        except BaseException as e:
+        except BaseException:
             if not autocommit:
                 await conn.rollback()
             raise
@@ -60,7 +60,7 @@ async def execute(sql, args, autocommit=True):
 
 def create_args_string(num):
     L = []
-    for n in range(num):
+    for _ in range(num):
         L.append('?')
     return ', '.join(L)
 

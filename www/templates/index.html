@@ -1,0 +1,61 @@
+{% extends '__base__.html' %}
+
+{% block title %}首页{% endblock %}
+
+{% block beforehead %}
+{% endblock %}
+
+{% block content %}
+<!-- 海报图片 -->
+<div class="pic"></div>
+<!-- ⬇⬇轮播区展示部分⬇⬇ -->
+<div class="intr">
+    <!-- 轮播图 -->
+    <div class="slider fl">
+        <ul class="slides">
+            <li class="slide"><img src="../static/igs/1.jpg" alt="intro1"></li>
+            <li class="slide"><img src="../static/igs/2.jpg" alt="intro2"></li>
+            <li class="slide"><img src="../static/igs/3.jpg" alt="intro3"></li>
+            <li class="slide"><img src="../static/igs/4.jpg" alt="intro4"></li>
+            <li class="slide"><img src="../static/igs/5.jpg" alt="intro5"></li>
+            <li class="slide"><img src="../static/igs/6.jpg" alt="intro6"></li>
+            <li class="slide"><img src="../static/igs/1.jpg" alt="intro1"></li>
+        </ul>
+    </div>
+    <!-- 文本说明 -->
+    <div class="msg fl">
+        <h2>INTRODUCE</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui earum incidunt, nesciunt saepe in
+            corrupti
+            ipsa molestiae quo, vero similique commodi maiores, consequuntur excepturi consequatur totam. Hic
+            nesciunt alias debitis.
+        </p>
+    </div>
+</div>
+<!-- ⬆⬆轮播区展示部分⬆⬆ -->
+<!-- ⬇⬇正文预览区⬇⬇ -->
+<div class="txt">
+    {% for blog in blogs %}
+        <article class="list">
+            <div class="fl">
+                <div class="cvr">
+                    <img src="" alt="">
+                </div>
+                <p class="t">{{ blog.created_at|datetime }}</p>
+            </div>
+            <div class="art fl">
+                <div class="tit">
+                    <h2><a href="/blog/{{blog.id}}">{{ blog.name }}</a></h2>
+                </div>
+                <div class="sim">
+                    <p>{{ blog.summary }}</p>
+                </div>
+            </div>
+        </article>
+    {% endfor %}
+    <div>
+        {{ pagination('/index?page=', page)}}
+    </div>
+</div>
+{% endblock %}

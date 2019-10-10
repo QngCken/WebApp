@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f9f9f9;
+}
+.w {         /* 版心公共类 ，居中显示*/
+    width: 1000px;
+    margin: 0 auto;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.fixed {
+    position: fixed;
+    top: -96px;
+    z-index: 99;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: mediumblue;
+}
+a:hover {
+    color: #c81623;
+}
+input[type=button], img {
+    cursor: pointer;
+}
+header {
+    height: 96px;
+}
+.top {
+    width: 100%;
+    height: 16px;
+    background-color: #eee;
+    position: absolute;
+    left: 0;
+}
+.btm {
+    width: 1000px;
+    height: 80px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.btm a {
+    line-height: 80px;
+}
+.home a {
+    font-size: 24px;
+    font-weight: 600;
+    /* color: blue; */
+}
+/* .home a:hover {
+    color: red;
+} */
+.logo h1 {
+    position: absolute;
+    left: -9999px;
+}
+.logo a img {
+    width: 154px;
+    height: 50px;
+    margin: 15px 75px 15px 30px;
+}
+input {
+    border: 0;
+    outline: none;
+}
+.srh {
+    margin: 27px 60px;
+    border: 1px solid #aaa;
+}
+.srh input[type=text] {
+    width: 180px;
+    height: 24px;
+    padding-left: 5px;
+    line-height: 24px;
+    color: #666;
+}
+.srh input[type=button] {
+    width: 48px;
+    height: 26px;
+    background-color: #aaa;
+    color: #fff;
+}
+.chk {
+    height: 80px;
+    margin-right: 24px;
+    position: relative;
+}
+.chk i {
+    font-size: 20px;
+}
+.chk a {
+    margin: 0 12px;
+}
+.usri {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 15px;
+    right: 125px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid gray;
+}
+section.w {
+    background-color: #f6f6f6;
+    padding-top: 20px;
+}
+.pic {
+    width: 720px;
+    height: 200px;
+    margin: 0 auto 10px;
+    background: url(../igs/lolr.jpg) no-repeat;
+    border-radius: 10px;
+    box-shadow: black 0 0 10px;
+}
+/* 介绍部分 */
+.intr {
+    background-color: #f6f6f6;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.slider {
+    width: 300px;
+    height: 180px;
+    margin: 20px 40px 20px 60px;
+    border-radius: 30px;
+    box-shadow: #ccc -8px -10px 4px;
+    overflow: hidden;
+}
+.slides {
+    width: 3000px;
+    height: 180px;
+}
+.slides li {
+    float: left;
+}
+.slides li img {
+    width: 300px;
+    height: 180px;
+}
+.msg {
+    background-color: #ddd;
+    width: 500px;
+    margin: 20px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.msg h2 {
+    padding: 16px;
+}
+.msg p {
+    padding: 0 40px 20px;
+    line-height: 24px;
+}
+/* 正文部分 */
+.txt {
+    background-color: #f1f1f1;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: #f2f2f2 0 -10px 10px;
+}
+.txt .list {
+    width: 900px;
+    height: 160px;
+    margin: 10px auto;
+    padding: 12px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.txt .content {
+    width: 90%;
+    margin: 20px auto;
+}
+.content .tl {
+    text-align: center;
+    margin: 40px;
+}
+/* MarkDown结构约束 */
+.content pre {
+    white-space: pre-wrap;
+}
+.content pre img {
+    max-width: 100%;
+}
+.content li {
+    list-style: initial;
+}
+.txt .cvr {
+    width: 80px;
+    height: 80px;
+    margin: 24px 24px 8px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.txt .t {
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+}
+.txt .art {
+    width: 640px;
+    height: 110px;
+    margin: 12px 20px;
+}
+.art .tit {
+    margin-bottom: 10px;
+    color: #555;
+}
+.tit h2 {
+    text-indent: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.tit a{
+    color: #333;
+}
+.tit a:hover{
+    color: #888;
+}
+.art .sim {
+    padding-left: 20px;
+    text-indent: 40px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #666;
+    border-radius: 10px;
+}
+/* 分页 */
+.pagi {
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+.pagi a {
+    margin: 0 10%;
+}
+.un {
+    color: #000;
+    pointer-events: none
+}
+hr {
+    width: 80%;
+    margin: 10px auto;
+}
+.tj {   /* 推荐 */
+    overflow: hidden;
+    padding: 40px 10%;
+    font-size: 14px;
+}
+/* 页脚部分 */
+footer {
+    background-color: #ccc;
+    color: #eee;
+    text-align: center;
+}
+footer .w {
+    padding: 10px 0;
+    background-color: #aaa;
+    border-radius: 5px;
+    box-shadow: #aaa 0 0 10px;
+    position: relative;
+}
+footer .logo {
+    position: absolute;
+    top: -16px;
+    left: -10px;
+}
+footer .w div {
+    margin: 5px 0;
+}
+footer .w a {
+    font-size: 14px;
+    color: rgb(41, 20, 119);
+}
+footer .w a:hover {
+    color: #d0cdf3;
+}

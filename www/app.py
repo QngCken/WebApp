@@ -3,7 +3,7 @@
 
 __author__ = 'QngCken'
 
-import logging; logging.basicConfig(level=logging.INFO)
+import logging; logging.basicConfig(level=logging.INFO) #日志级别
 import asyncio, os, json, time
 from datetime import datetime
 from aiohttp import web
@@ -131,7 +131,7 @@ def datetime_filter(t):
 async def init(loop):
     await orm.create_pool(loop=loop, **configs.db)
     app = web.Application(loop=loop, middlewares=[
-        logger_factory, auth_factory, response_factory
+        logger_factory, auth_factory, data_factory, response_factory
     ])
     init_jinja2(app, filters=dict(datetime=datetime_filter))
     add_routes(app, 'handlers')
